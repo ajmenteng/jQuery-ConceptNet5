@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Check the locations</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/topcoat/0.8.0/css/topcoat-desktop-light.min.css">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Fjalla+One|Cantarell:400,400italic,700italic,700" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+<div>
+<div class="content">
+<b>FINAL PROJECT
+<br>CS755-Cloud Computing | Spring 2015</b>
+<br>John Wesly Chandra (johncha@bu.edu)
+<br><br>
+<i>This tool will try to extract all location-related words from the input text. It is based on the reference from ConceptNet5</i>
+
+<textarea id="mytext" cols=120 rows=10 autofocus>
+
+</textarea>
+<br>
+<button class="topcoat-button--cta">Check this text!</button>
+<input type="button" value="Reset Form" onclick="mytext.value=''" class="topcoat-button--cta" />
+<br>
+</div>
+<div class="content">
+<i>Click on the column's header to sort the results</i>
+<table id="results" class="table">
+<thead>
+	<tr>
+		<th data-tsorter="input-text">Location</th>
+		<th data-tsorter="input-text">Reasoning</th>
+		<th data-tsorter="input-text">Occurrence</th>
+	</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+</div>
+<div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="pull.js"></script>
+<script src="tsorter.js" type="text/javascript"></script>
+<script type="text/javascript">
+function init() {
+    var sorter = tsorter.create('results');
+}    
+window.onload = init;
+</script>
+</body>
+</html>
